@@ -2,20 +2,91 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 浏览器限制  IE8以下不识别 -->
+    <title></title>
+    <meta name="description" content="">
+    <!-- 网站内容描述 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 页面缩放  1无缩放-->
+    <script>
+        window.onload = function () {
+            getRem(640, 100)
+        };//640为设计尺寸
+        window.onresize = function () {
+            getRem(640, 100)
+        };
+        function getRem(pwidth, prem) {
+            var html = document.getElementsByTagName("html")[0];
+            var oWidth = document.body.clientWidth || document.documentElement.clientWidth;
+            html.style.fontSize = oWidth / pwidth * prem + "px";
+        }//定义函数
+    </script><!-- px单位转换为rem单位-->
+    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font/iconfont.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-            
-        <script src="" async defer></script>
-    </body>
+    <header class="container-fluid">
+        <hgroup class="row">
+            <span class="col-xs-2 iconfont clear">&#xe61f;</span>
+            <span class="col-xs-8 h-middle">首页</span>
+        </hgroup>
+    </header>
+    <aside class="container">
+        <li class="row">钱包</li>
+        <li class="row">信息</li>
+        <li class="row">没有</li>
+    </aside>
+    <section>
+        <div class="m-main">
+            <ul class="banner">
+                <li></li> 
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <article class="container">
+            <div class="row list"></div>
+        </article>
+    </section>
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4">
+                <a href="index.html">
+                    <span class="iconfont">&#xec6b;</span>
+                    <p>主页</p>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="cart.html">
+                    <span class="iconfont">&#xf0178;</span>
+                    <p>购物车</p>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href="zhuce.html">
+                    <span class="iconfont">&#xe60d;</span>
+                    <p>个人</p>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+    <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
 </html>

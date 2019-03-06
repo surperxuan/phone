@@ -9,7 +9,7 @@ var rename = require('gulp-rename');//改名
 var sourcemaps = require('gulp-sourcemaps');//备注信息
 gulp.task('copyIndex',function(){ 
 	//gulp.src()找到我们的所有html然后使用.pipe()通道 
-	//gulp.dest()拷贝 
+	//gulp.dest()拷贝给 
 	gulp.src('*.html')
 	.pipe(gulp.dest('dist'))
 	.pipe(connect.reload());//链接再加载
@@ -24,7 +24,7 @@ gulp.task("sass",function(){//压缩css；gulp-sass
 })
 gulp.task('images',function(){//压缩图片
 	gulp.src('img/*/**') 
-	// .pipe(imagemin()) 
+	//.pipe(imagemin()) 
 	.pipe(gulp.dest('dist/img'))
 	});
 gulp.task('scripts',function(){ //压缩js 
@@ -42,6 +42,8 @@ gulp.task('watch',function(){//监控复制
 	 gulp.watch(['*.html','sass/*.scss','img/**','js/*.js'],['copyIndex','sass','images','scripts']);
 });
 gulp.task('default',['sever','watch']); //创建服务器，随时监听
+
+gulp.task('build', ['copyIndex','sass','images','scripts'])
 
 
 

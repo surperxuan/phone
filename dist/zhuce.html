@@ -30,7 +30,7 @@
     </script><!-- px单位转换为rem单位-->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font/iconfont.css" type="text/css">
-    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/zhuce.css" type="text/css">
 </head>
 
 <body>
@@ -39,27 +39,33 @@
         <![endif]-->
     <header class="container-fluid">
         <hgroup class="row">
-            <span class="col-xs-2 iconfont clear">&#xe61f;</span>
-            <span class="col-xs-8 h-middle">首页</span>
+            <a href="index.html"><span class="col-xs-2 iconfont">&#xebf0;</span></a>
+            <span class="col-xs-8 h-middle">个人</span>
         </hgroup>
     </header>
-    <aside class="container">
-        <li class="row">钱包</li>
-        <li class="row">信息</li>
-        <li class="row">没有</li>
-    </aside>
-    <section>
-        <div class="m-main">
-            <ul class="banner">
-                <li></li> 
-                <li></li>
-                <li></li>
-                <li></li>
+    <section class="container">
+        <div class="h-left">
+            <ul class="t-choose row">
+                <li class="type-left col-xs-6">注册</li>
+                <li class="type-right col-xs-6">登陆</li>
             </ul>
+            <div class="row"><span class="col-xs-4">用户名：</span><input class="col-xs-7" type="text"
+                    placeholder="用户名/邮箱/手机号" id="username" /></div>
+            <div class="row"><span class="col-xs-4">密码：</span><input class="col-xs-7" type="password" placeholder="密码"
+                    id="email" /></div>
+            <input type="button" value="注册" id="h-btn" />
         </div>
-        <article class="container">
-            <div class="row list"></div>
-        </article>
+        <div class="h-right">
+            <ul class="t-choose row">
+                <li class="type-left col-xs-6">注册</li>
+                <li class="type-right col-xs-6">登陆</li>
+            </ul>
+            <div class="row"><span class="col-xs-4">用户名：</span><input class="col-xs-7" type="text" placeholder="账号"
+                    id="userphone" /></div>
+            <div class="row"><span class="col-xs-4">密码：</span><input class="col-xs-7" type="password" placeholder="密码"
+                    id="putintor" /></div>
+            <input type="button" value="登陆" id="p-btn" />
+        </div>
     </section>
     <footer class="container-fluid">
         <div class="row">
@@ -86,7 +92,7 @@
     </footer>
     <script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/zhuce.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>

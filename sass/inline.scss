@@ -1,0 +1,23 @@
+body,p,ul,li,dl,dd,dt,h1,h2,h3,h4,input{margin:0;padding:0;}
+a{text-decoration:none;color:inherit;}
+li{list-style:none;} 
+img{display:block;border:0;}
+.iconfont{font-size:0.52rem;}
+html,body{height:100%;}  
+header{height:10%;background:rgb(58, 58, 204);
+    hgroup{height:100%;
+        span{margin-top:0.2rem;}
+        .h-middle{text-align: center;font-size:26px;}
+    }
+}
+
+section{height:80%;width:100%;overflow:auto;
+    article{
+        .gocart{
+            width:2.0rem;height:0.6rem;background: orangered;border:0;outline:inherit;
+        }
+    }
+}
+footer{
+    height:10%;background:rgb(58, 58, 204);text-align:center;
+}
